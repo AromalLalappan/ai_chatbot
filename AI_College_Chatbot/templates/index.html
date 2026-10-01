@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="CampusPulse AI - An intelligent senior mentor and college navigator helping newly joined students understand their campus background, academics, CGPA, hostel life, and clubs.">
+    <meta name="theme-color" content="#090d16">
+
+    <title>CampusPulse • College Navigator & Freshers AI</title>
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+
+    <!-- Markdown & Sanitizer (with script.js safe fallback) -->
+    <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/dompurify/dist/purify.min.js"></script>
+
+    <!-- Project Styles -->
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+
+<body>
+
+    <!-- Ambient glowing backdrop orbs -->
+    <div class="bg-decor" aria-hidden="true">
+        <div class="decor-orb orb-1"></div>
+        <div class="decor-orb orb-2"></div>
+        <div class="decor-orb orb-3"></div>
+    </div>
+
+    <div class="app-container">
+        <main class="chat-shell">
+
+            <!-- App Header -->
+            <header class="chat-header">
+                <div class="header-brand">
+                    <div class="brand-avatar">
+                        🎓
+                        <span class="avatar-pulse" title="CampusPulse AI is active"></span>
+                    </div>
+                    <div class="brand-info">
+                        <h1>
+                            CampusPulse AI
+                            <span class="badge-fresher">Freshers Guide</span>
+                        </h1>
+                        <p>
+                            <span>●</span> Senior Mentor & Campus Navigator
+                        </p>
+                    </div>
+                </div>
+
+                <div class="header-actions">
+                    <button class="action-btn" id="handbook-btn" title="View Freshers Handbook">
+                        <span class="btn-icon">📖</span>
+                        <span>Handbook</span>
+                    </button>
+
+                    <button class="action-btn action-btn-icon" id="tts-toggle-btn" title="Toggle Voice Narration">
+                        🔊
+                    </button>
+
+                    <button class="action-btn action-btn-icon" id="theme-toggle-btn" title="Toggle Theme">
+                        ☀️
+                    </button>
+
+                    <button class="action-btn action-btn-icon" id="clear-chat-btn" title="Clear Chat History">
+                        🗑️
+                    </button>
+                </div>
+            </header>
+
+            <!-- Chat Scroll Area -->
+            <div class="chat-body" id="chat-body" role="log" aria-live="polite">
+
+                <!-- Welcome Hero (shown at start) -->
+                <section class="welcome-hero" id="welcome-hero">
+                    <div class="hero-icon-wrapper">
+                        🎓
+                    </div>
+                    <h2 class="hero-title">Welcome to College Life!</h2>
+                    <p class="hero-subtitle">
+                        Starting college is an exciting journey. I am your 24/7 AI Senior Mentor, ready to help you navigate your college background, orientation, CGPA grading, hostel life, clubs, and campus safety.
+                    </p>
+
+                    <div class="quick-prompts-section">
+                        <div class="quick-prompts-label">
+                            <span>✨</span> Quick Starter Topics for Freshers <span>✨</span>
+                        </div>
+
+                        <div class="quick-prompts-grid">
+                            <button class="prompt-card" data-query="What is the first week orientation roadmap and what documents do I need?">
+                                <span class="prompt-card-icon">📋</span>
+                                <div class="prompt-card-text">
+                                    <div class="prompt-card-title">Orientation Roadmap</div>
+                                    <div class="prompt-card-desc">Required documents, student ID & Wi-Fi setup</div>
+                                </div>
+                            </button>
+
+                            <button class="prompt-card" data-query="How does the CGPA grading system and 75% attendance rule work?">
+                                <span class="prompt-card-icon">📊</span>
+                                <div class="prompt-card-text">
+                                    <div class="prompt-card-title">CGPA & Attendance</div>
+                                    <div class="prompt-card-desc">10-point scale, credits & exam eligibility</div>
+                                </div>
+                            </button>
+
+                            <button class="prompt-card" data-query="Tell me about hostel life, curfew timings, and packing essentials.">
+                                <span class="prompt-card-icon">🏢</span>
+                                <div class="prompt-card-text">
+                                    <div class="prompt-card-title">Hostel & Mess Life</div>
+                                    <div class="prompt-card-desc">Curfew hours, mess food & must-pack checklist</div>
+                                </div>
+                            </button>
+
+                            <button class="prompt-card" data-query="What technical and cultural clubs can I join as a fresher?">
+                                <span class="prompt-card-icon">🎭</span>
+                                <div class="prompt-card-text">
+                                    <div class="prompt-card-title">Clubs & Fests</div>
+                                    <div class="prompt-card-desc">Coding, robotics, music, drama & sports</div>
+                                </div>
+                            </button>
+
+                            <button class="prompt-card" data-query="What is the campus anti-ragging policy and emergency helplines?">
+                                <span class="prompt-card-icon">🛡️</span>
+                                <div class="prompt-card-text">
+                                    <div class="prompt-card-title">Anti-Ragging & Safety</div>
+                                    <div class="prompt-card-desc">Zero-tolerance rules & 24x7 toll-free helpline</div>
+                                </div>
+                            </button>
+
+                            <button class="prompt-card" data-query="What are the main campus facilities like library, labs, and gym?">
+                                <span class="prompt-card-icon">🗺️</span>
+                                <div class="prompt-card-text">
+                                    <div class="prompt-card-title">Campus Facilities</div>
+                                    <div class="prompt-card-desc">Central library hours, computing labs & sports</div>
+                                </div>
+                            </button>
+                        </div>
+                    </div>
+                </section>
+
+            </div>
+
+            <!-- Scroll to Bottom Button -->
+            <button class="scroll-bottom-btn" id="scroll-bottom-btn" title="Scroll to bottom" aria-label="Scroll to bottom">
+                ↓
+            </button>
+
+            <!-- Chat Input Dock -->
+            <footer class="chat-dock">
+                <div class="input-container">
+                    <textarea 
+                        id="chat-input" 
+                        class="chat-input" 
+                        rows="1" 
+                        placeholder="Ask about college background, CGPA, hostel, clubs..."
+                        aria-label="Chat input message"></textarea>
+
+                    <div class="input-dock-actions">
+                        <button class="mic-btn" id="mic-btn" title="Click to speak your question" aria-label="Voice input">
+                            🎙️
+                        </button>
+                        <button class="send-btn" id="send-btn" title="Send message" aria-label="Send message">
+                            ➤
+                        </button>
+                    </div>
+                </div>
+
+                <div class="dock-footer">
+                    <span class="dock-hint">💡 Press <strong>Enter</strong> to send • <strong>Shift+Enter</strong> for new line</span>
+                    <span class="dock-tag">Real-Time Zero Lag Engine</span>
+                </div>
+            </footer>
+
+        </main>
+    </div>
+
+    <!-- Freshers Handbook Modal -->
+    <div class="modal-overlay" id="handbook-modal" role="dialog" aria-modal="true" aria-labelledby="modal-title">
+        <div class="handbook-modal">
+            <div class="modal-header">
+                <div class="modal-title-group">
+                    <h2 id="modal-title">📖 Freshers Survival Handbook</h2>
+                    <p>Essential campus background, academic guidelines & emergency contacts</p>
+                </div>
+                <button class="modal-close-btn" id="modal-close-btn" title="Close Handbook" aria-label="Close modal">
+                    ✕
+                </button>
+            </div>
+
+            <div class="modal-tabs">
+                <button class="tab-btn active" data-tab="tab-orientation">📌 Orientation & Checklist</button>
+                <button class="tab-btn" data-tab="tab-academics">📊 CGPA & Academics</button>
+                <button class="tab-btn" data-tab="tab-hostel">🛏️ Hostel & Campus Life</button>
+                <button class="tab-btn" data-tab="tab-safety">🚨 Safety & Contacts</button>
+            </div>
+
+            <div class="modal-tab-content">
+                <!-- Tab: Orientation -->
+                <div class="tab-pane active" id="tab-orientation">
+                    <div class="guide-card">
+                        <h3>📋 First-Week Orientation Checklist</h3>
+                        <p>Make sure you complete these steps in your first 7 days on campus:</p>
+                        <ul>
+                            <li><strong>Document Verification:</strong> Submit 10th/12th marksheets, Migration/TC, and allotment letter at Admin Block.</li>
+                            <li><strong>Biometric & ID Card:</strong> Get your official Smart ID Card photographed at the Student Affairs Center.</li>
+                            <li><strong>Campus Wi-Fi & Email:</strong> Receive your institutional email (@college.edu) and campus-wide Wi-Fi credentials.</li>
+                            <li><strong>LMS Portal:</strong> Log in to the Course Portal to access semester timetables and lecture slides.</li>
+                            <li><strong>Library Registration:</strong> Activate your library RFID tag for borrowing books and digital journals.</li>
+                        </ul>
+                    </div>
+                    <div class="highlight-box">
+                        💡 <strong>Senior Advice:</strong> Make at least 5 digital backups and 4 hard copies of all your original documents before arriving on campus!
+                    </div>
+                </div>
+
+                <!-- Tab: Academics -->
+                <div class="tab-pane" id="tab-academics">
+                    <div class="guide-card">
+                        <h3>📈 Understanding CGPA & Credits</h3>
+                        <p>College uses a 10-point scale (Cumulative Grade Point Average). Each subject is weighted by credits (typically 3 to 4 credits for theory + lab):</p>
+                        <ul>
+                            <li><strong>O Grade (10 pts):</strong> 90% and above</li>
+                            <li><strong>A+ Grade (9 pts):</strong> 80% - 89%</li>
+                            <li><strong>A Grade (8 pts):</strong> 70% - 79%</li>
+                            <li><strong>B+ Grade (7 pts):</strong> 60% - 69%</li>
+                            <li><strong>F Grade (0 pts):</strong> Below 40% (Fail / Arrear)</li>
+                        </ul>
+                    </div>
+                    <div class="danger-box">
+                        ⚠️ <strong>The Strict 75% Attendance Rule:</strong> You must maintain 75% minimum attendance in every course. Falling below 75% results in exam detention.
+                    </div>
+                    <div class="guide-card">
+                        <h3>📝 Evaluation Breakdown</h3>
+                        <p><strong>40% Internal Assessment</strong> (2 mid-term exams, quizzes, assignments) + <strong>60% End-Semester Exam</strong>.</p>
+                    </div>
+                </div>
+
+                <!-- Tab: Hostel -->
+                <div class="tab-pane" id="tab-hostel">
+                    <div class="guide-card">
+                        <h3>🧳 Must-Pack Essentials for Freshers</h3>
+                        <ul>
+                            <li>Bedding: Fitted mattress cover, 2 bedsheets, pillow, light blanket.</li>
+                            <li>Electricals: 1 surge-protected power extension board (min 3-4 plugs).</li>
+                            <li>Bathroom: Bucket, mug, toiletry kit, laundry bag, clothes hangers.</li>
+                            <li>Health: Personal medical kit (pain relief, cold meds, bandages, thermometer).</li>
+                            <li>Security: 2 solid brass padlocks with spare keys.</li>
+                        </ul>
+                    </div>
+                    <div class="guide-card">
+                        <h3>🕒 Hostel Rules & Timings</h3>
+                        <p>Hostel gates close at <strong>9:00 PM on weekdays</strong> and <strong>9:30 PM on weekends</strong>. Weekend night-outs require an approved digital pass via the student hostel app.</p>
+                    </div>
+                </div>
+
+                <!-- Tab: Safety -->
+                <div class="tab-pane" id="tab-safety">
+                    <div class="danger-box">
+                        🛡️ <strong>Zero-Tolerance Anti-Ragging Policy:</strong> Ragging in any form (verbal, mental, or physical) is strictly prohibited by law.
+                    </div>
+                    <div class="guide-card">
+                        <h3>📞 24x7 Emergency Helplines</h3>
+                        <ul>
+                            <li><strong>National Anti-Ragging Toll-Free Helpline:</strong> <code>1800-180-5522</code> (24x7)</li>
+                            <li><strong>Campus Anti-Ragging Flying Squad:</strong> <code>+91 80-2345-6799</code></li>
+                            <li><strong>Anti-Ragging Portal:</strong> <a href="https://antiragging.in" target="_blank">antiragging.in</a></li>
+                            <li><strong>Campus Health & Medical Center:</strong> <code>+91 80-2345-6711</code></li>
+                            <li><strong>Student Counseling & Wellness:</strong> <code>+91 80-2345-6722</code></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Project Script -->
+    <script src="{{ url_for('static', filename='script.js') }}"></script>
+</body>
+
+</html>

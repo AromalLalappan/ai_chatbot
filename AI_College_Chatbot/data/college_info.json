@@ -1,0 +1,121 @@
+{
+  "college": {
+    "name": "Apex Institute of Technology & Sciences",
+    "short_name": "Apex Tech",
+    "motto": "Excellence in Innovation, Integrity in Leadership",
+    "established": 1998,
+    "accreditation": "NAAC 'A++' Grade • NBA Accredited • NIRF Top Ranked",
+    "campus_size": "85 Acres Green Campus",
+    "location": "Knowledge City, Sector 4",
+    "helpline": {
+      "admissions": "+91 (0) 80-2345-6789",
+      "general_inquiry": "+91 (0) 80-2345-6700",
+      "anti_ragging_national": "1800-180-5522 (Toll Free, 24x7)",
+      "anti_ragging_campus": "+91 (0) 80-2345-6799",
+      "medical_emergency": "+91 (0) 80-2345-6711",
+      "counseling_center": "+91 (0) 80-2345-6722"
+    }
+  },
+  "first_year_guide": {
+    "orientation": {
+      "overview": "The 1-week Fresher Induction & Orientation Program welcomes all newly joined students. You will meet department deans, faculty mentors, club leads, and get your ID card and lab logins.",
+      "documents_needed": [
+        "Allotment letter & fee receipt",
+        "Original 10th & 12th marksheets with 3 self-attested photocopies",
+        "Transfer Certificate (TC) & Migration Certificate",
+        "Category / Caste / Income Certificate (if applicable)",
+        "6 passport-sized photographs",
+        "Government Photo ID (Aadhaar / Passport / Voter ID)",
+        "Anti-ragging affidavit (signed by student and parent via antiragging.in)"
+      ],
+      "first_week_milestones": [
+        "Day 1: Welcome Address & Campus Tour",
+        "Day 2: Department Orientation & Faculty Advisor introduction",
+        "Day 3: Student ID Card issuance & Biometric registration",
+        "Day 4: Campus Wi-Fi & LMS (Canvas/Moodle) portal credentials setup",
+        "Day 5: Club Fair & Sports trials",
+        "Day 6: Freshers' Icebreaker & Talent Showcase"
+      ]
+    },
+    "academics": {
+      "grading_system": "10-point CGPA scale (Cumulative Grade Point Average). Grades range from O (Outstanding - 10) down to F (Fail - 0).",
+      "cgpa_formula": "SGPA = Sum(Course Credits * Grade Points) / Total Semester Credits. CGPA is the weighted average of all semesters.",
+      "attendance_rule": "Minimum 75% attendance is strictly mandatory in every subject to appear for end-semester exams. 65%-74% requires medical board approval.",
+      "evaluation_breakdown": "40% Continuous Internal Assessment (2 Mid-term tests, assignments, quizzes) + 60% End-Semester Examination.",
+      "credit_structure": "Average 20-24 credits per semester. A 4-credit course typically involves 3 lecture hours + 1 tutorial/lab hour per week."
+    },
+    "campus_facilities": {
+      "central_library": "Open 8:00 AM to 11:00 PM (24x7 during exams). Access to over 150,000 books, IEEE/Springer digital journals, and silent reading cubicles.",
+      "computer_center": "High-performance computing labs, 1 Gbps high-speed Wi-Fi across campus, cloud development access.",
+      "cafeteria_and_mess": "Central Food Court, 3 satellite canteens, hygienic mess with South Indian, North Indian, and continental meal options.",
+      "health_center": "24/7 on-campus clinic with resident doctor, 2 nursing staff, basic pharmacy, and ambulance service.",
+      "sports_complex": "Olympic-sized track, indoor badminton & basketball courts, cricket ground, gymnasium, and swimming pool."
+    },
+    "hostel_life": {
+      "curfew_timings": "First-year hostel gates close at 9:00 PM on weekdays, 9:30 PM on weekends. Late entry requires prior warden gate pass.",
+      "amenities": "High-speed Wi-Fi, 24/7 power backup, RO purified drinking water, hot water geysers, laundromat service, recreation room with TT and TV.",
+      "packing_essentials": [
+        "Bed linen (mattress cover, bedsheets, pillow, light blanket)",
+        "Bucket, mug, toiletries, laundry bag, hangers",
+        "Extension power strip with surge protection",
+        "Personal medical kit with basic medicines",
+        "Formal attire for presentations & traditional wear for festivals",
+        "Padlocks with duplicate keys for wardrobe and room"
+      ]
+    },
+    "clubs_and_societies": [
+      {
+        "name": "CodeCrafters (Developer & Coding Club)",
+        "category": "Technical",
+        "description": "Competitive programming, web/mobile development, open-source projects, and 24-hour hackathons."
+      },
+      {
+        "name": "RoboGenesis (Robotics & AI)",
+        "category": "Technical",
+        "description": "Autonomous robots, drones, IoT hardware, and national competitions."
+      },
+      {
+        "name": "Rhythm & Raag (Music & Dance Society)",
+        "category": "Cultural",
+        "description": "Band performances, classical/contemporary dance, open mic nights, and inter-collegiate fest showcases."
+      },
+      {
+        "name": "The Debating Society & MUN",
+        "category": "Literary",
+        "description": "Parliamentary debates, model United Nations conferences, public speaking, and quiz competitions."
+      },
+      {
+        "name": "NSS & Rotaract Club",
+        "category": "Social Service",
+        "description": "Community outreach, blood donation camps, environmental drives, and social leadership."
+      }
+    ],
+    "anti_ragging_policy": "Zero-tolerance policy towards any form of ragging. Ragging is a criminal offense punishable under law. The campus is monitored by CCTV and anti-ragging flying squads. Students can report any incident confidentially 24x7 without fear."
+  },
+  "faq_quick_answers": [
+    {
+      "q": "What is the 75% attendance rule?",
+      "a": "You must maintain at least 75% attendance in both lectures and practical labs for every registered course. Falling below 75% without authorized medical leave leads to detention from end-semester examinations."
+    },
+    {
+      "q": "How does the CGPA system work?",
+      "a": "CGPA is calculated on a 10-point scale based on credit hours and grade points. Aim for an 8.0+ CGPA right from Semester 1, as 1st year subjects form the bedrock of your overall cumulative score!"
+    },
+    {
+      "q": "How do I get my College ID Card and Wi-Fi access?",
+      "a": "ID cards are photographed and issued on Day 3 of Orientation at the Student Affairs Center. Wi-Fi credentials (username/password) are sent to your registered student email after biometric verification."
+    },
+    {
+      "q": "What should freshers pack for the hostel?",
+      "a": "Bring bedsheets, pillow, blanket, bucket & mug, extension cord, umbrella, basic medicines, padlocks with keys, formal attire for college functions, and essential personal toiletries."
+    },
+    {
+      "q": "How can I join college clubs and societies?",
+      "a": "During the Club Fair in the first week, every club hosts interactive booths. You can register for beginner auditions, introductory workshops, and fresher hackathons—no prior expertise is required!"
+    },
+    {
+      "q": "What should I do if I face ragging or bullying?",
+      "a": "Immediately report to the Campus Anti-Ragging Committee at +91 80-2345-6799 or the National 24x7 Toll-Free Helpline at 1800-180-5522. Every report is strictly confidential and acted upon instantly."
+    }
+  ]
+}
